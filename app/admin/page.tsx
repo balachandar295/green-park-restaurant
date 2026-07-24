@@ -287,8 +287,8 @@ export default function AdminDashboard() {
       <header className="bg-white border-b border-emerald-100 px-4 py-3 sticky top-0 z-30 shadow-xs">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <div className="relative w-9 h-9">
-              <Image src="/logo-v4.png" alt="Logo" width={36} height={36} className="w-full h-full object-contain" />
+            <div className="w-9 h-9 flex items-center justify-center">
+              <Image src="/logo-clean.png" alt="Logo" width={36} height={36} className="w-full h-full object-contain" />
             </div>
             <div>
               <h1 className="text-base font-extrabold text-slate-900 leading-tight">
