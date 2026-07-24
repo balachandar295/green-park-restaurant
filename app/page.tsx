@@ -57,12 +57,12 @@ export default function LoginPage() {
         
         {/* Header with Centered Logo */}
         <div className="text-center space-y-2 flex flex-col items-center">
-          <div className="w-20 h-20 sm:w-24 sm:h-24 mx-auto flex items-center justify-center transition transform hover:scale-105">
+          <div className="w-24 h-24 sm:w-28 sm:h-28 mx-auto flex items-center justify-center transition transform hover:scale-105">
             <Image
-              src="/logo-clean.png"
+              src="/logo-v5.png"
               alt="Green Park Family Restaurant Logo"
-              width={96}
-              height={96}
+              width={112}
+              height={112}
               className="w-full h-full object-contain"
               priority
             />

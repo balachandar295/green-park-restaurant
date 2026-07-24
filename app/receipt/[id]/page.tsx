@@ -150,7 +150,7 @@ export default function DigitalReceiptPage() {
         {/* Header Branding */}
         <div className="text-center space-y-2 border-b border-dashed border-slate-200 pb-4">
           <div className="w-16 h-16 mx-auto flex items-center justify-center">
-            <Image src="/logo-clean.png" alt="Logo" width={64} height={64} className="w-full h-full object-contain" />
+            <Image src="/logo-v5.png" alt="Logo" width={64} height={64} className="w-full h-full object-contain" />
           </div>
           <div>
             <h1 className="text-lg font-black text-slate-900 tracking-tight">{restaurant.name}</h1>
