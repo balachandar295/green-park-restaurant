@@ -82,7 +82,7 @@ export default function LoginPage() {
           <div className="flex items-center gap-1.5 mb-2.5 px-1">
             <Sparkles className="w-4 h-4 text-emerald-600" />
             <span className="text-xs font-bold text-emerald-800 uppercase tracking-wider">
-              Quick Role Login (One-Tap Demo)
+              Login
             </span>
           </div>
           <div className="grid grid-cols-2 gap-2">
@@ -226,7 +226,7 @@ export default function LoginPage() {
 
         {/* Footer */}
         <p className="text-center text-xs text-slate-400 font-medium">
-          Green Park Family Restaurant • Vercel + Supabase
+          Green Park Family Restaurant
         </p>
 
       </div>
