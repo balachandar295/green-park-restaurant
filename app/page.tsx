@@ -59,7 +59,7 @@ export default function LoginPage() {
         <div className="text-center space-y-3 flex flex-col items-center">
           <div className="relative w-28 h-28 mx-auto rounded-3xl overflow-hidden shadow-lg border-4 border-emerald-500 bg-white p-1.5 transition transform hover:scale-105">
             <Image
-              src="/logo.jpg"
+              src="/logo-v2.jpg"
               alt="Green Park Family Restaurant Logo"
               fill
               className="object-cover rounded-2xl"

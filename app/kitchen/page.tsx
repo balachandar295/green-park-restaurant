@@ -85,7 +85,7 @@ export default function KitchenDashboard() {
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center gap-3">
             <div className="relative w-9 h-9 rounded-xl overflow-hidden border border-emerald-500 bg-emerald-50">
-              <Image src="/logo.jpg" alt="Logo" fill className="object-cover" />
+              <Image src="/logo-v2.jpg" alt="Logo" fill className="object-cover" />
             </div>
             <div>
               <h1 className="text-base font-extrabold text-white leading-tight flex items-center gap-2">
