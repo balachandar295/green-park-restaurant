@@ -139,8 +139,8 @@ export default function CashierDashboard() {
       <header className="bg-white border-b border-emerald-100 px-4 py-3 sticky top-0 z-30 shadow-xs">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <div className="relative w-9 h-9 rounded-xl overflow-hidden border border-emerald-500 bg-emerald-50">
-              <Image src="/logo-v2.jpg" alt="Logo" fill className="object-cover" />
+            <div className="relative w-10 h-10">
+              <Image src="/logo-v2.jpg" alt="Logo" fill className="object-contain" />
             </div>
             <div>
               <h1 className="text-base font-extrabold text-slate-900 leading-tight">
