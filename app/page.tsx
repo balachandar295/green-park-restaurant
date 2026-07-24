@@ -55,22 +55,24 @@ export default function LoginPage() {
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-green-50 to-emerald-100 flex flex-col justify-center items-center p-4 sm:p-6">
       <div className="w-full max-w-md bg-white rounded-3xl shadow-xl border border-emerald-100 p-6 sm:p-8 space-y-6">
         
-        {/* Header with Logo */}
-        <div className="text-center space-y-3">
-          <div className="relative w-24 h-24 mx-auto rounded-2xl overflow-hidden shadow-md border-2 border-emerald-500 bg-emerald-50 p-1">
+        {/* Header with Centered Logo */}
+        <div className="text-center space-y-3 flex flex-col items-center">
+          <div className="relative w-28 h-28 mx-auto rounded-3xl overflow-hidden shadow-lg border-4 border-emerald-500 bg-white p-1.5 transition transform hover:scale-105">
             <Image
               src="/logo.jpg"
               alt="Green Park Family Restaurant Logo"
               fill
-              className="object-cover rounded-xl"
+              className="object-cover rounded-2xl"
               priority
             />
           </div>
-          <div>
-            <h1 className="text-2xl font-extrabold text-slate-900 tracking-tight">
+          <div className="space-y-1">
+            <h1 className="text-2xl font-black text-slate-900 tracking-tight">
               Green Park
             </h1>
-            <p className="text-sm font-semibold text-emerald-700">Family Restaurant Management</p>
+            <p className="text-xs font-extrabold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200 inline-block">
+              Family Restaurant Management
+            </p>
           </div>
         </div>
 
