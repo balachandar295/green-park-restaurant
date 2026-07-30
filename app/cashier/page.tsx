@@ -314,10 +314,18 @@ export default function CashierDashboard() {
                 <div className="flex flex-col gap-2">
                   <button
                     onClick={() => router.push(`/receipt/${generatedReceiptPayment.id}`)}
-                    className="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs rounded-xl shadow-xs transition flex items-center justify-center gap-2"
+                    className="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-xs rounded-xl shadow-xs transition flex items-center justify-center gap-2"
+                  >
+                    <Printer className="w-4 h-4" />
+                    <span>Print Thermal Receipt</span>
+                  </button>
+
+                  <button
+                    onClick={() => router.push(`/receipt/${generatedReceiptPayment.id}`)}
+                    className="w-full py-2.5 bg-emerald-50 text-emerald-800 hover:bg-emerald-100 border border-emerald-200 font-bold text-xs rounded-xl transition flex items-center justify-center gap-2"
                   >
                     <Receipt className="w-4 h-4" />
-                    <span>Open Shareable Digital Receipt</span>
+                    <span>Open Shareable Digital Receipt & WhatsApp</span>
                   </button>
 
                   <button

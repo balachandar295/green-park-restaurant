@@ -49,6 +49,10 @@ export default function DigitalReceiptPage() {
     }
   }, [params.id]);
 
+  const handleThermalPrint = () => {
+    window.print();
+  };
+
   const handleDownloadPDF = async () => {
     if (!receiptRef.current) return;
     setIsExporting(true);
@@ -114,7 +118,7 @@ export default function DigitalReceiptPage() {
     <div className="min-h-screen bg-slate-100 flex flex-col items-center justify-center p-4 py-8">
       
       {/* Top Action Bar */}
-      <div className="w-full max-w-sm mb-4 flex justify-between items-center">
+      <div className="w-full max-w-sm mb-4 flex justify-between items-center no-print">
         <button
           onClick={() => router.back()}
           className="flex items-center gap-1.5 px-3 py-1.5 bg-white text-slate-700 font-bold text-xs rounded-xl shadow-xs border border-slate-200"
@@ -124,6 +128,13 @@ export default function DigitalReceiptPage() {
         </button>
 
         <div className="flex gap-2">
+          <button
+            onClick={handleThermalPrint}
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 text-white font-bold text-xs rounded-xl shadow-xs hover:bg-blue-700 transition"
+          >
+            <Printer className="w-3.5 h-3.5" />
+            <span>Print Thermal</span>
+          </button>
           <button
             onClick={handleWhatsAppShare}
             className="flex items-center gap-1.5 px-3 py-1.5 bg-emerald-600 text-white font-bold text-xs rounded-xl shadow-xs hover:bg-emerald-700 transition"
@@ -142,10 +153,10 @@ export default function DigitalReceiptPage() {
         </div>
       </div>
 
-      {/* RECEIPT CARD CONTAINER (Optimized for Mobile view & Export) */}
+      {/* RECEIPT CARD CONTAINER (Optimized for Thermal Printing, Mobile view & Export) */}
       <div
         ref={receiptRef}
-        className="w-full max-w-sm bg-white rounded-3xl border border-slate-200 p-6 shadow-xl space-y-5 text-slate-800"
+        className="w-full max-w-sm bg-white rounded-3xl border border-slate-200 p-6 shadow-xl space-y-5 text-slate-800 printable-receipt"
       >
         {/* Header Branding */}
         <div className="text-center space-y-2 border-b border-dashed border-slate-200 pb-4">
@@ -238,14 +249,42 @@ export default function DigitalReceiptPage() {
 
       </div>
 
-      {/* Alternative Download Option */}
-      <div className="w-full max-w-sm mt-4 text-center">
+      {/* Action Buttons Section */}
+      <div className="w-full max-w-sm mt-4 space-y-2 no-print">
         <button
-          onClick={handleDownloadImage}
-          className="text-xs font-bold text-slate-600 hover:text-emerald-700 hover:underline"
+          onClick={handleThermalPrint}
+          className="w-full py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-sm rounded-2xl shadow-md transition flex items-center justify-center gap-2"
         >
-          Download Image (.PNG) Instead
+          <Printer className="w-4.5 h-4.5" />
+          <span>🖨️ Print Thermal Receipt</span>
         </button>
+
+        <div className="grid grid-cols-2 gap-2">
+          <button
+            onClick={handleWhatsAppShare}
+            className="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl shadow-xs transition flex items-center justify-center gap-1.5"
+          >
+            <Share2 className="w-4 h-4" />
+            <span>Share WhatsApp</span>
+          </button>
+          <button
+            onClick={handleDownloadPDF}
+            disabled={isExporting}
+            className="w-full py-2.5 bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs rounded-xl shadow-xs transition flex items-center justify-center gap-1.5 disabled:opacity-50"
+          >
+            <Download className="w-4 h-4" />
+            <span>{isExporting ? 'Exporting...' : 'Download PDF'}</span>
+          </button>
+        </div>
+
+        <div className="text-center pt-2">
+          <button
+            onClick={handleDownloadImage}
+            className="text-xs font-bold text-slate-500 hover:text-emerald-700 hover:underline"
+          >
+            Download PNG Image Instead
+          </button>
+        </div>
       </div>
 
     </div>
